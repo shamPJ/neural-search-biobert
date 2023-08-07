@@ -43,7 +43,7 @@ app.layout = html.Div(id='view-body', className='app-body', children=[
                                         style={'padding': 20}),
                         html.Div(children=[ html.Label('Entity labels'),
                                         dcc.Checklist(
-                                            ['Subject', 'Disease', 'Chemical'], inputStyle={"margin-right": "10px"}, style={'width':'60%'}),
+                                            ['Subject', 'Disease', 'Chemical'], inputStyle={"margin-right": "10px"}, style={'width':'50%'}),
                                         ], style={'padding': 20}),
                         html.Div(children=[ html.Button('Generate summary', id='button-summary', n_clicks=0, style={'font-size':"18px", 'border-radius': '8px', 'backgroundColor': '#ECEFF1'}),
                                         ],style={'textAlign': 'left', 'padding': 10}),

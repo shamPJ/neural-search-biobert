@@ -11,9 +11,7 @@ dir_path = os.path.join("data")
 
 def get_local_data():
     print("Fetching data from local DB ...")
-    path = os.getcwd()
-    print(path)
-    csv_files = glob.glob(os.path.join(path, dir_path, "*.csv"))
+    csv_files = glob.glob(os.path.join("data", "*.csv"))
     dfs = [pd.read_csv(f) for f in csv_files]
     df = pd.concat(dfs)
     return df
@@ -41,17 +39,6 @@ def compute_embeddings():
     print("Done.")
 
 compute_embeddings()   
-        
-# dict_new = {}
-# file = h5py.File('data_retrieval/data/emb_vectors.h5', 'r')
-# embs_group = file['embs_group']
-# embs_group_keys = embs_group.keys()
-# for key in embs_group_keys:
-#     dict_new[key]= embs_group[key][:]
-
-# print(file.keys())
-# print(embs_group)
-# print(embs_group_keys)
   
 
                         
